@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "./styles/styles.tokens.css";
+@import "./styles/animations.css";
+
+:root {
+  /* Back-compat: keep these pointing at tokens */
+  --background: rgb(var(--color-bg));
+  --foreground: rgb(var(--color-fg));
+  --muted: rgb(var(--color-muted));
+  --card: rgb(var(--color-glass) / var(--glass-alpha));
+  --card-border: rgb(var(--color-glass-border) / var(--glass-border-alpha));
+  --accent: rgb(var(--color-brand));
+  --accent-2: rgb(var(--color-brand-2));
+  --bg-subtle: rgb(var(--color-bg-subtle));
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f17;
+    --foreground: #e7eefc;
+  }
+}
+
+body {
+  background: rgb(var(--color-bg));
+  color: rgb(var(--color-fg));
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: rgb(var(--color-brand) / 0.18);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+ * SCROLL BEHAVIOR
+ * ============================================ */
+
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

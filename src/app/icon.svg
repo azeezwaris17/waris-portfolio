@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect x="64" y="64" width="384" height="384" rx="96" fill="#5048e5" />
+  <rect x="96" y="96" width="320" height="320" rx="80" fill="#5048e5" opacity="0.92" />
+  <g fill="#ffffff">
+    <!-- terminal prompt: >_ -->
+    <path d="M170 214c-6 0-12 2-16 6-9 9-9 23 0 32l56 56-56 56c-9 9-9 23 0 32 9 9 23 9 32 0l72-72c9-9 9-23 0-32l-72-72c-4-4-10-6-16-6z" />
+    <rect x="278" y="356" width="120" height="28" rx="14" />
+  </g>
+</svg>
+
